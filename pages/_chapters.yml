@@ -1,6 +1,12 @@
 book:
   chapters:
-    - part: "Intermediate R"
+    - part: "Getting started with R & RStudio (MASA workshop)"
+      chapters:
+        - text: "Overview"
+          href: pages/GSW_R_1_Overview.qmd
+        - text: "ALL FOR NOW"
+          href: pages/GSW_R_2.qmd
+    - part: "Intermediate R (MASA workshop)"
       chapters:
         - text: "Overview"
           href: pages/Intermediate_R_1_Overview.qmd
@@ -14,21 +20,7 @@ book:
           href: pages/Intermediate_R_5_Plotting_with_ggplot2.qmd
         - text: "Introduction to linear regression"
           href: pages/Intermediate_R_6_Introduction_to_linear_regression.qmd
-        - text: "Glossary"
+    - part: "Additional materials"
+      chapters:
+        - text: "R glossary"
           href: pages/Glossary.qmd
-    - part: "BMS1066/7"
-      chapters:
-        - text: "Workshop 1"
-          href: pages/BMS_yr1_workshop1.qmd
-        - text: "Workshop 2"
-          href: pages/BMS_yr1_workshop2.qmd
-        - text: "Workshop 3"
-          href: pages/BMS_yr1_workshop3.qmd
-    - part: "VMS3012"
-      chapters:
-        - text: "VMS3012"
-          href: pages/VMS3012.qmd
-    - part: "Normality"
-      chapters:
-        - text: "Normality"
-          href: pages/Normality.qmd

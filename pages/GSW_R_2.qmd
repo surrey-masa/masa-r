@@ -4,9 +4,9 @@ number-sections: false
 
 # R workshop 1:<br>Getting started in R and data handling
 
-## Introduction: R workshops overview
+## Introduction
 
-Over three workshops this semester, you'll be learning the basics of R and RStudio.
+Over three workshops this semester, you’ll be learning the basics of R and RStudio.
 
 ### What are R and RStudio?
 
@@ -22,59 +22,6 @@ R is the name of the programming language, while RStudio is an environment for w
 - A valuable skill for both further study and future careers
 
 While many of the tasks covered in these workshops could be completed in other software such as Excel, the coding skills you develop will form the basis for conducting more advanced analyses in R and other statistical software.
-
-### Using these course materials
-
-These course materials contain the same content as the workshops and workshop slides. They are designed to complement the workshops and provide a convenient way to access all the material in one place.
-
-**Example code**
-
-Example code will appear in grey code blocks like the one below. You can copy the code by hovering over it and clicking the clipboard icon that appears in the top-right corner of the code block. You can then paste it directly into R.
-
-```{r}
-#| eval: false
-# This is a code chunk. You can copy it it by clicking the clipboard icon.
-
-print("Welcome to R")
-```
-
-**Template code**
-
-Sometimes you will see code displayed in blue panels, such as the one below. These examples are designed to show the general structure of a particular function or piece of code and cannot be copied directly into R and run as they are. Instead, they contain blank spaces or placeholders that indicate the information you need to add.
-
-::: {.panel-tabset .panel-blue}
-## Template code - example
-
-Template code is shown in blue panels like this one
-
-```{r}
-#| eval: false
-# This code can't be copied and run as it is
-# It shows the structure of the code and the blanks you need to fill in
-
-print(_____________)
-```
-
-- Fill in the blank with the name of the object you want to print
-
-:::
-
-**Tasks**
-
-Workshop activities and exercises will appear in green boxes like the one below.
-
-::: {.callout-caution icon="false"}
-### [{{< fa laptop-code >}}]{style="color: #2E6B4E;"}  Task
-
-As you work through the materials, have a go at all the tasks.
-:::
-
-
-### Getting help from MASA
-
-MASA is the Maths and Statistics Advice service at the university. They can support with mathematical and statistical topics relating to your course, including the use of statistical software.
-
-For help with R outside of these sessions, you can attend a drop-in session or book a 1:1 appointment with MASA. <a href="https://surreylearn.surrey.ac.uk/d2l/le/lessons/215610/lessons/1856863" target="_blank" rel="noopener noreferrer">More information can be found here</a>.
 
 ## Workshop 1 overview
 
@@ -935,9 +882,8 @@ ________________(______________)
 - The `argument` blank(s) should be filled in with the information that you want the function to work with. If there are multiple arguments, they are separated by commas.
 :::
 
-::: {.panel-tabset group="language"}
-## R
-Examples of functions:
+::: {.panel-tabset}
+## Examples - functions:
 ```{r}
 #| eval: false
 print(mass_1)           # this prints the value stored within the mass_1 object
@@ -1055,8 +1001,8 @@ For example, below is a data frame containing our penguin data. Each row represe
 
 ```{r}
 #| echo: false
-penguins <- data.frame(species, body_mass_g)
-penguins
+penguins_small <- data.frame(species, body_mass_g)
+penguins_small
 ```
 
 Next, we'll see how to create this data frame.
@@ -1068,7 +1014,7 @@ Data frames can be created by combining vectors, where each vector becomes a col
 We already have two vectors containing our penguin data - `species` and `body_mass_g`. Rather than keeping them separate, we can combine them into a single data frame so that all of our penguin information is stored together:
 
 ```{r}
-penguins <- data.frame(species, body_mass_g)
+penguins_small <- data.frame(species, body_mass_g)
 ```
 
 This is similar to how we created vectors using `c()` — but instead of combining individual values, we are combining vectors. The arguments are the names of the vectors we want to include, and will form the columns of the data frame.
@@ -1082,14 +1028,14 @@ This is similar to how we created vectors using `c()` — but instead of combini
 Let's print the data frame to see what it looks like:
 
 ```{r}
-print(penguins)
+print(penguins_small)
 ```
 
 ::: {.callout-note icon="false" collapse="true"}
 ### [{{< fa info-circle >}}]{style="color: #9e9e9e;"}  Data frames will appear in the environment pane - click to view them
 As with other objects, stored data frames will appear in the environment pane, but under "Data".
 
-To view a data frame in the source pane, click on the data frame name (i.e. "penguins" here).
+To view a data frame in the source pane, click on the data frame name (i.e. "penguins_small" here).
 
 ![](../images/env_peng.png){width="400" style="display:block; margin: 2em auto;"}
 
@@ -1100,15 +1046,15 @@ The data frame will open in a new tab. To return to your script, either close th
 
 :::: {.callout-caution icon="false"}
 ### [{{< fa laptop-code >}}]{style="color: #2E6B4E;"}  Task
-- As shown above, use the `data.frame()` function to combine your `species` and `body_mass_g` vectors into a single data frame called `penguins`.
-- Click on the data frame name ("penguins") from within the Environment tab to open it in the source pane.
+- As shown above, use the `data.frame()` function to combine your `species` and `body_mass_g` vectors into a single data frame called `penguins_small`.
+- Click on the data frame name ("penguins_small") from within the Environment tab to open it in the source pane.
 
 ::: {.callout-caution icon="false" collapse="true"}
 ### [{{< fa magnifying-glass >}}]{style="color: #2E6B4E;"} Answer
 
 ```{r}
-# Combine the `species` and `body_mass_g` vectors into a single data frame called penguins
-penguins <- data.frame(species, body_mass_g)
+# Combine the `species` and `body_mass_g` vectors into a single data frame called penguins_small
+penguins_small <- data.frame(species, body_mass_g)
 ```
 :::
 
@@ -1117,7 +1063,7 @@ penguins <- data.frame(species, body_mass_g)
 
 ::::
 
-## Data frames - accessing columns
+### Data frames - accessing columns
 
 ::: {.callout-tip icon="false"}
 ### [{{< fa regular lightbulb >}}]{style="color: #872046;"}  Learning outcome
@@ -1129,37 +1075,37 @@ It is common to want to work with, or analyse, a specific variable (column) in a
 To access a specific column in a data frame, use the `$` operator. Write the name of the data frame, followed by `$`, followed by the name of the column. For example:
 
 ```{r}
-penguins$species      # access the species column of the penguins data frame
-penguins$body_mass_g  # access the body_mass_g column of the penguins data frame
+penguins_small$species      # access the species column of the penguins_small data frame
+penguins_small$body_mass_g  # access the body_mass_g column of the penguins_small data frame
 ```
 
 Each column in a data frame is a vector. This means that once you have selected a column, you can apply functions to it just as you did with vectors earlier. For example:
 
 ```{r}
-print(penguins$species)
+print(penguins_small$species)
 ```
 
 Earlier, we used the `+` operator to add the three body masses together one at a time. A more convenient approach is to use the `sum()` function on the body mass column:
 
 ```{r}
-sum(penguins$body_mass_g)
+sum(penguins_small$body_mass_g)
 ```
 
 
 :::: {.callout-caution icon="false"}
 ### [{{< fa laptop-code >}}]{style="color: #2E6B4E;"}  Task
-- Use the `print()` function to print the `body_mass_g` column of your `penguins` data frame
-- Use the `class()` function to find the class (i.e. data type) of the `body_mass_g` column of your `penguins` data frame
+- Use the `print()` function to print the `body_mass_g` column of your `penguins_small` data frame
+- Use the `class()` function to find the class (i.e. data type) of the `body_mass_g` column of your `penguins_small` data frame
 
 ::: {.callout-caution icon="false" collapse="true"}
 ### [{{< fa magnifying-glass >}}]{style="color: #2E6B4E;"} Answer
 
 ```{r}
-# Print the body_mass_g column of the penguins data frame
-print(penguins$body_mass_g)
+# Print the body_mass_g column of the penguins_small data frame
+print(penguins_small$body_mass_g)
 
-# Find the class of the body_mass_g column of the penguins data frame
-class(penguins$body_mass_g)
+# Find the class of the body_mass_g column of the penguins_small data frame
+class(penguins_small$body_mass_g)
 ```
 :::
 
@@ -1201,11 +1147,11 @@ Use the `str()` function to view the structure of:
 ### [{{< fa magnifying-glass >}}]{style="color: #2E6B4E;"} Answer
 
 ```{r}
-# View the structure of the whole penguins data frame
-str(penguins)
+# View the structure of the whole penguins_small data frame
+str(penguins_small)
 
-# View the structure of the species column of the penguins data frame
-str(penguins$species)
+# View the structure of the species column of the penguins_small data frame
+str(penguins_small$species)
 ```
 :::
 
@@ -1325,7 +1271,7 @@ The video below demonstrates how to install and load an R package.
 
 *Note*: The examples used in the video are the dplyr and readxl packages. We do not require these packages for this workshop - we only need to install and load the Hmisc package.
 
-- The video imports a file called "iris" - ours is called "penguins", so whenever the video refers to "iris", replace this with "penguins" in your code
+- The video imports a file called "iris" - ours is called "penguins_small", so whenever the video refers to "iris", replace this with "penguins_small" in your code
 - The video uses: Session > Set Working Directory > *Choose Directory* to import the data. Session > Set Working Directory > *To Source File Location* is quicker if your Excel file is saved in the same location asyour script, but either method is fine.
 - The "previous video" referred to in the video is the video about installing packages, which...
 
@@ -1350,23 +1296,23 @@ The video below demonstrates how to install and load an R package.
 
 ## Extension: Exploring a data frame
 
-Have a go at using some of the functions below to explore the `penguins` data frame in more detail.
+Have a go at using some of the functions below to explore the `penguins_small` data frame in more detail.
 
 ::: {style="margin-top: 2em;"}
 :::
 
 | Task | Code |
 |------|------|
-| Find the number of columns | `ncol(penguins)` |
-| Find the number of rows | `nrow(penguins)` |
-| Select a single column (variable) | `penguins$species` |
-| Look at the first few rows of data | `head(penguins)` |
-| Look at the structure of the data | `str(penguins)` |
-| Count the number of each species | `table(penguins$species)` |
-| Find the mean body mass | `mean(penguins$body_mass_g)` |
-| Find the minimum body mass | `min(penguins$body_mass_g)` |
-| Generate basic summary statistics | `summary(penguins)` |
-| Generate more detailed summary statistics | `describe(penguins)`* |
+| Find the number of columns | `ncol(penguins_small)` |
+| Find the number of rows | `nrow(penguins_small)` |
+| Select a single column (variable) | `penguins_small$species` |
+| Look at the first few rows of data | `head(penguins_small)` |
+| Look at the structure of the data | `str(penguins_small)` |
+| Count the number of each species | `table(penguins_small$species)` |
+| Find the mean body mass | `mean(penguins_small$body_mass_g)` |
+| Find the minimum body mass | `min(penguins_small$body_mass_g)` |
+| Generate basic summary statistics | `summary(penguins_small)` |
+| Generate more detailed summary statistics | `describe(penguins_small)`* |
 
 *the describe function is contained within the Hmisc package (which we installed in the previous section). Therefore, this function will only run properly if you have the Hmisc package installed and loaded.
 
@@ -1380,7 +1326,7 @@ In the next workshop, we'll continue to look at functions for exploring and summ
 ## Feedback
 
 
-<iframe width="100%" height="600px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=kyaQa3QQqkCeIdiURqLrtVgcZHyUszJDvoXhoILzj8dUMVdSMEQ4SVoxUDhaTkdEUDRVMkZSNUE4My4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+<iframe width="100%" height="800px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=kyaQa3QQqkCeIdiURqLrtVgcZHyUszJDvoXhoILzj8dUMVdSMEQ4SVoxUDhaTkdEUDRVMkZSNUE4My4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 
 
 ## Summary
@@ -1423,7 +1369,7 @@ Below is a summary of the main concepts covered in this workshop.
 - Data frames can be created by combining vectors using the `data.frame()` function.
 - When creating a data frame, all vectors must contain the same number of values.
 - Each column of a data frame is itself a vector.
-- Use the `$` operator to access a column from a data frame, e.g. `penguins$body_mass_g`.
+- Use the `$` operator to access a column from a data frame, e.g. `penguins_small$body_mass_g`.
 - Functions can be applied directly to data frame columns because columns are vectors.
 :::
 

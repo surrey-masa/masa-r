@@ -25,12 +25,13 @@ book:
     right:
       - text: "![](images/stag_logo.png){fig-alt='University of Surrey logo'}"
   page-footer:
-    left: "© 2026 University of Surrey"
-    right: "Built with Quarto"
+    center: |
+      Licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+      ![](https://creativecommons.org/images/deed/cc_icon_black_x2.png){width=25px}
+      University of Surrey - Maths and Statistics Advice
   search:
     location: sidebar
   chapters:
     - part: "Welcome"
       chapters:
         - index.qmd
-        - Introduction.qmd

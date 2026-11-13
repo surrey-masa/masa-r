@@ -1,16 +1,15 @@
 ---
-title: "Overview"
-editor: visual
-author: "Alice Cheng"
-date: today
+title: "About these materials"
 number-sections: false
 ---
 
-## Overview {.unnumbered}
+These materials contain............
 
-This is a quick overview of the MASA-R project. This page provides a summary of the key features and resources available.
+## Chapters in this book
 
-Feel free to explore the documentation and reach out if you need assistance.
+- [Getting started with R & RStudio (MASA workshop)](pages/GSW_R_1_Overview.qmd)
+- [Intermediate R & RStudio (MASA workshop)](pages/Intermediate_R_1_Overview.qmd)
+- [Glossary](pages/Glossary.qmd)
 
 ::: callout-tip
 ### Example section
