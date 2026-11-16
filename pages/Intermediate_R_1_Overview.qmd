@@ -1,10 +1,9 @@
 ---
-title: "Intermediate R"
+title: "Intermediate R & RStudio"
 format:
   html:
     css: styles.css
     theme: default
-editor: visual
 ---
 
 ## Overview
@@ -62,7 +61,7 @@ Exercises in these materials are labelled according to their level of difficulty
 
 :::: dplyr-table
 | Level | Description |
-|----------------------|-------------------------------------------------|
+|-----------------------|-------------------------------------------------|
 | {{< fa star >}} {{< fa regular star >}} {{< fa regular star >}} | Level 1 exercises are similar to the workshop examples. |
 | {{< fa star >}} {{< fa star >}} {{< fa regular star >}} | Level 2 exercises extend the workshop examples, for example by using a different function. |
 | {{< fa star >}} {{< fa star >}} {{< fa star >}} | Level 3 exercises go beyond the workshop examples, for example by combining multiple ideas or extending the syntax covered. |

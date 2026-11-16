@@ -1,12 +1,12 @@
 book:
   chapters:
-    - part: "Getting started with R & RStudio (MASA workshop)"
+    - part: "Getting started with R & RStudio"
       chapters:
         - text: "Overview"
           href: pages/GSW_R_1_Overview.qmd
         - text: "ALL FOR NOW"
           href: pages/GSW_R_2.qmd
-    - part: "Intermediate R (MASA workshop)"
+    - part: "Intermediate R & RStudio"
       chapters:
         - text: "Overview"
           href: pages/Intermediate_R_1_Overview.qmd

@@ -3,19 +3,9 @@ title: "About these materials"
 number-sections: false
 ---
 
-These materials contain............
+These online materials extend and support the two R workshops delivered by the Maths and Statistics Advice (MASA) service at the University of Surrey. They are used during the workshops and can also be used independently as a self-study resource or for future reference.
 
-## Chapters in this book
+Follow the links below to access the corresponding course materials.
 
-- [Getting started with R & RStudio (MASA workshop)](pages/GSW_R_1_Overview.qmd)
-- [Intermediate R & RStudio (MASA workshop)](pages/Intermediate_R_1_Overview.qmd)
-- [Glossary](pages/Glossary.qmd)
-
-::: callout-tip
-### Example section
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-:::
+- [Getting started with R & RStudio](pages/GSW_R_1_Overview.qmd)
+- [Intermediate R & RStudio](pages/Intermediate_R_1_Overview.qmd)
